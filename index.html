@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <!-- Realizado por Nelson Sierra y Joseph De la Rans -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zonas Wifi / Cartagena</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ── HEADER ──────────────────────────────────────────────── -->
+    <header>
+      <div>
+        <h1>Zonas<span>Wifi CTG</span></h1>
+      </div>
+      <div class="h-right">
+        <div class="h-count" id="count">—</div>
+        <div class="h-count-label">Zonas Totales</div>
+      </div>
+    </header>
+
+    <!-- ── CONTROLS ────────────────────────────────────────────── -->
+    <div class="controls">
+      <!-- Filtro de nivel de uso -->
+      <div class="ctrl-section">
+        <span class="ctrl-label">Uso</span>
+        <button class="pill active" data-r="all">Todos</button>
+        <button class="pill" data-r="low">Bajo</button>
+        <button class="pill" data-r="medium">Medio</button>
+        <button class="pill" data-r="high">Alto</button>
+      </div>
+
+      <!-- Filtro de tráfico -->
+      <div class="ctrl-section">
+        <span class="ctrl-label">Tráfico</span>
+        <button class="pill active" data-t="all">Todos</button>
+        <button class="pill" data-t="low">Bajo</button>
+        <button class="pill" data-t="medium">Medio</button>
+        <button class="pill" data-t="high">Alto</button>
+      </div>
+
+      <!-- Buscar + Ordenar -->
+      <div class="ctrl-section">
+        <div class="search-wrap">
+          <input
+            type="search"
+            id="search"
+            placeholder="Buscar zona wifi…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="sort-wrap">
+          <select id="sort">
+            <option value="name">Nombre</option>
+            <option value="users">Dispositivos ↑</option>
+            <option value="users-d">Dispositivos ↓</option>
+            <option value="logins">Logins ↓</option>
+            <option value="time">Sesión ↓</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="loading">Cargando zonas wifi <span class="blink"></span></div>
+    <div id="empty">No se encontraron zonas</div>
+    <div id="card-grid"></div>
+
+    <!-- ── MODAL ───────────────────────────────────────────────── -->
+    <div id="overlay">
+      <div class="modal">
+        <button class="modal-close" id="close">✕</button>
+        <div class="modal-top">
+          <div class="modal-img-col">
+            <img id="m-img" alt="" />
+          </div>
+          <div class="modal-info-col">
+            <div class="modal-eyebrow" id="m-eye"></div>
+            <div class="modal-name" id="m-name"></div>
+            <div class="modal-tags" id="m-tags"></div>
+          </div>
+        </div>
+        <div class="modal-desc-wrap">
+          <p class="modal-desc" id="m-desc"></p>
+        </div>
+        <div class="modal-stats" id="m-stats"></div>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <!-- Realizado por Nelson Sierra y Joseph De la Rans -->
+    <footer>
+      <p>
+        Realizado por Nelson Sierra y Joseph De la Rans —
+        <a
+          href="https://www.datos.gov.co/resource/nmzq-aian.json"
+          target="_blank"
+          >datos.gov.co / nmzq-aian</a
+        >
+      </p>
+    </footer>
+
+    <!-- Logic -->
+    <script src="app.js"></script>
+  </body>
+</html>

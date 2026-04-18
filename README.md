@@ -37,7 +37,7 @@ Solo necesitas un navegador moderno y acceso a internet para consumir la API.
 
 ### Opcion 1: abrir directo
 
-1. Abre [Pagina](https://nessisx.github.io/Clash-API-REST/) en el navegador.
+1. Abre [Pagina](https://nessisx.github.io/API-SODA/) en el navegador.
 
 ### Opcion 2: servidor local con Python
 

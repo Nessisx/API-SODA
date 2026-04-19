@@ -29,10 +29,6 @@ Este proyecto carga la información más reciente disponible desde la API SODA2,
 - `styles.css`: estilos visuales y layout responsivo.
 - `app.js`: consumo de API, lógica de filtros y renderizado.
 
-## Requisitos
-
-Solo necesitas un navegador moderno y acceso a internet para consumir la API.
-
 ## Cómo ejecutar
 
 ### Opcion 1: abrir directo
@@ -61,9 +57,9 @@ Solo necesitas un navegador moderno y acceso a internet para consumir la API.
 
 ![Filtros y búsqueda](screenshots/filtros.png)
 
-#### Modal de detalle
+#### Detalle zona
 
-![Modal de detalle](screenshots/detalle-zona.png)
+![Detalle zona](screenshots/detalle-zona.png)
 
 #### Estado sin resultados
 
